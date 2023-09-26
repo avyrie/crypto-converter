@@ -1,1 +1,1 @@
-export { default } from "./Converter"
+export { default } from "./Converter";

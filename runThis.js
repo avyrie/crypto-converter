@@ -10,11 +10,11 @@
 // console.log(two)
 // console.log(three)
 
-const rando = 'monkey'
+const rando = "monkey";
 const obj = {
-    [rando]: 23
-}
+  [rando]: 23,
+};
 
 const { [rando]: myKey } = obj;
 
-console.log(myKey)
+console.log(myKey);

@@ -21,6 +21,7 @@ export const useCurrency = (): {
   setCurrencyOne: (value: string) => void;
   currencyTwo: string;
   setCurrencyTwo: (value: string) => void;
+  currencyList: object;
   isLoading: boolean;
   isError: boolean;
   setAmount: (value: number) => void;
@@ -87,6 +88,7 @@ export const useCurrency = (): {
     setCurrencyOne,
     setCurrencyTwo,
     currencyTwo,
+    currencyList,
     convertedAmount,
     ratesData,
     symbolsData,

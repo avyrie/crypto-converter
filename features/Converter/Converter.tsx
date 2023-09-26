@@ -2,6 +2,7 @@
 import { Box, Spinner, Text } from "@chakra-ui/react";
 import { useCurrency } from "../common/hooks/useCurrency";
 import ConverterHeader from './components/ConverterHeader/'
+import ConverterOption from './components/ConverterOption/'
 
 const Converter = () => {
     const { 
@@ -13,6 +14,7 @@ const Converter = () => {
         setCurrencyOne,
         setCurrencyTwo,
         currencyTwo, 
+        currencyList,
         convertedAmount,
         ratesData, 
         symbolsData, 
@@ -42,6 +44,18 @@ const Converter = () => {
     return ( 
         <Box width={{ base: "90vw", sm: "45vw" }} margin="0 auto">
             <ConverterHeader />
+            <ConverterOption 
+                currencyList={currencyList}
+                symbol={symbolsData.data}
+                onCurrencyChange={setCurrencyOne}
+                currency={currencyOne}
+            />
+            <ConverterOption 
+                currencyList={currencyList}
+                symbol={symbolsData.data}
+                onCurrencyChange={setCurrencyTwo}
+                currency={currencyTwo}
+            />
         </Box>
     );
 }

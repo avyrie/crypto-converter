@@ -3,16 +3,19 @@ import { UseQueryResult, useQueries } from "@tanstack/react-query";
 import { useState } from "react";
 import { fetchRates, fetchSymbols } from "../../Converter/api/fetchData";
 
+// these interfaces describe the type of data we expect to receive from the API calls
 interface RatesData {
   rates: {
-    [key: string]: number;
+    [currencyCode: string]: number;
   };
   date: string;
   timestamp: number;
 }
 
 interface SymbolsData {
-  symbols: string;
+  symbols: {
+    [currencyCode: string]: string;
+  };
 }
 
 export const useCurrency = (): {
@@ -21,13 +24,14 @@ export const useCurrency = (): {
   setCurrencyOne: (value: string) => void;
   currencyTwo: string;
   setCurrencyTwo: (value: string) => void;
-  currencyList: object;
+  currencyList: string[];
   isLoading: boolean;
   isError: boolean;
   setAmount: (value: number) => void;
   convertedAmount: string | null;
-  ratesData: UseQueryResult;
-  symbolsData: UseQueryResult;
+  ratesData: object;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  symbolsData: any;
   date: string;
   time: string;
 } => {
@@ -76,8 +80,8 @@ export const useCurrency = (): {
     "en-US",
   );
 
-  const currencyList = symbolsData.data ? Object.keys(symbolsData.data) : {};
-  // console.log(ratesData.data?.rates)
+  const currencyList = symbolsData.data ? Object.keys(symbolsData.data) : [];
+  console.log(`THIS ${JSON.stringify(ratesData)}`);
 
   return {
     isLoading,

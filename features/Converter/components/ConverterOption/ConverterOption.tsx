@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Flex, Select } from "@chakra-ui/react";
-import { UseQueryResult } from "@tanstack/react-query";
 
+interface SymbolObject {
+    [currencyCode: string]: string;
+}
 type ConverterOptionProps = {
   currency: string;
   onCurrencyChange: (value: string) => void;
-  currencyList: object;
-  symbol: string | unknown;
+  currencyList: string[];
+  symbol: SymbolObject;
 };
 
 const ConverterOption: React.FC<ConverterOptionProps> = ({
@@ -22,7 +24,15 @@ const ConverterOption: React.FC<ConverterOptionProps> = ({
         size="md"
         defaultValue={currency}
         onChange={(e) => onCurrencyChange(e.target.value)}
-      ></Select>
+      >
+        {currencyList.map((currency) => {
+          return (
+            <option key={currency} value={currency}>
+              {currency} - {(symbol)[currency]}
+            </option>
+          );
+        })}
+      </Select>
     </Flex>
   );
 };

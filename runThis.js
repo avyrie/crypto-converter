@@ -18,3 +18,15 @@ const obj = {
 const { [rando]: myKey } = obj;
 
 console.log(myKey);
+
+const listicle = {
+    "rates": {
+        "AED":3.672962,
+        "AFN":79.269848,
+        "ALL":99.989607,
+        "AMD":387.949565
+    },
+    "date": "2023",
+    "timestamp": 1241
+}   
+console.log(typeof (listicle))

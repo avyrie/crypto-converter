@@ -59,8 +59,25 @@ export const useCurrency = (): {
     const convertedAmount = ratesData.data ? (ratesData.data.rates[currencyTwo] * amount).toFixed(2) : null;
 
     // When was this rate updated
-    const time = new Date(ratesData.data?.timestamp)
+    const date = ratesData.data ? new Date(ratesData.data?.timestamp).toLocaleDateString() : null;
+    const time = ratesData.data ? new Date(ratesData.data?.timestamp).toLocaleTimeString("en-US") : null;
+    
+    const currencyList = symbolsData.data ? Object.keys(symbolsData.data) : {};
     // console.log(ratesData.data?.rates)
 
-    return { amount, currencyOne, currencyTwo }
+    return { 
+        isLoading,
+        isError,
+        amount, 
+        setAmount,
+        currencyOne, 
+        setCurrencyOne,
+        setCurrencyTwo,
+        currencyTwo, 
+        convertedAmount,
+        ratesData, 
+        symbolsData, 
+        date, 
+        time 
+    }
 }

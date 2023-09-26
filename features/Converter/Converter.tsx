@@ -25,7 +25,7 @@ const Converter = () => {
     if (isError) 
         return (
             <Text fontWeight="bold" fontSize="3xl" color="white" my="10">
-                Something has gone terrible wrong
+                Something is amiss
             </Text>
         )
     

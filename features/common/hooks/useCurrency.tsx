@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { UseQueryResult, useQueries } from "@tanstack/react-query";
+import { useQueries, UseQueryResult } from "@tanstack/react-query";
 import { useState } from "react";
 import { fetchRates, fetchSymbols } from "../../Converter/api/fetchData";
 
@@ -28,8 +28,10 @@ export const useCurrency = (): {
   isLoading: boolean;
   isError: boolean;
   setAmount: (value: number) => void;
-  convertedAmount: string | null;
-  ratesData: object;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  convertedAmount: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ratesData: any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   symbolsData: any;
   date: string;
@@ -81,7 +83,7 @@ export const useCurrency = (): {
   );
 
   const currencyList = symbolsData.data ? Object.keys(symbolsData.data) : [];
-  console.log(`THIS ${JSON.stringify(ratesData)}`);
+  // console.log(`THIS ${JSON.stringify(ratesData)}`);
 
   return {
     isLoading,

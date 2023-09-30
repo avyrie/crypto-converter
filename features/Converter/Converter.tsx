@@ -1,10 +1,29 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, Spinner, Text } from "@chakra-ui/react";
+import { UseQueryResult } from "@tanstack/react-query";
 import { useCurrency } from "../common/hooks/useCurrency";
 import ConverterHeader from './components/ConverterHeader/'
 import ConverterOption from './components/ConverterOption/'
+import ConverterInput from './components/ConverterInput'
+import ConverterDisplay from './components/ConverterDisplay'
 
-const Converter = () => {
+interface ConverterProps {
+    isLoading: boolean,
+    isError: boolean,
+    amount: number, 
+    setAmout: (value: number) => void;
+    currencyOne: string, 
+    setCurrencyOne: (value: string) => void,
+    setCurrencyTwo: (value: string) => void,
+    currencyTwo: string, 
+    currencyList: string[],
+    convertedAmount: number,
+    ratesData: object,
+    symbolsData: object, 
+    date: string, 
+    time: string
+}
+const Converter: React.FC<ConverterProps> = () => {
     const { 
         isLoading,
         isError,
@@ -56,6 +75,8 @@ const Converter = () => {
                 onCurrencyChange={setCurrencyTwo}
                 currency={currencyTwo}
             />
+            <ConverterInput value={amount} onAmountChange={setAmount}/>
+            <ConverterDisplay amount={amount} ratesData={ratesData.data} currencyOne={currencyOne} currencyTwo={currencyTwo} convertedAmount={convertedAmount} date={date} time={time}/>
         </Box>
     );
 }

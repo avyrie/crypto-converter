@@ -11,9 +11,10 @@ function App() {
           <Tab>CryptoCurrency Conversions</Tab>
         </TabList>
         <TabIndicator mt="-1.5px"
-      height="4px"
-      bg="red.800"
-      borderRadius="1px" />
+          height="4px"
+          bg="red.800"
+          borderRadius="1px" 
+        />
         <TabPanels>
           <TabPanel>
             <Converter /> 

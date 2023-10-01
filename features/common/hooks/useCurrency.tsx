@@ -56,6 +56,7 @@ export const useCurrency = (): {
         select: ({ rates, date, timestamp }: RatesData) => {
           return { rates, date, timestamp };
         },
+        keepPreviousData: true
       },
       {
         queryKey: ["symbols"],
@@ -66,6 +67,8 @@ export const useCurrency = (): {
       },
     ],
   });
+
+  // when we change the first currency in the selector, we are making an api call. when we change the second, we are just changing the calculation
 
   // however many queries we put into this array,if SOME of these (ratesData or symbolsData) have isLoading as true, our isLoading is going to come back as true, if both have false, then our isLoading will have a value of false
   const isLoading = [ratesData, symbolsData].some((query) => query.isLoading);

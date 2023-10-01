@@ -27,6 +27,10 @@ const ConverterDisplay: React.FC<ConverterDisplayProps> = ({
                 <Text fontSize="2xl" fontWeight="bold" color="purple.500">
                     {amount} {currencyOne}
                 </Text>
+                <Text fontSize="2xl" fontWeight="bold" color="purple.500">
+                    {convertedAmount} {currencyTwo}
+                </Text>
+                <Text fontSize='xs' color='gray.400'>Market rates collected - {date} {time}</Text>
             </Box>
         </>
     )

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Flex, Select } from "@chakra-ui/react";
 
 interface SymbolObject {
@@ -18,16 +17,27 @@ const ConverterOption: React.FC<ConverterOptionProps> = ({
   symbol,
 }) => {
   return (
-    <Flex gap="1rem" shadow="md" padding="1rem" borderRadius="lg">
+    <Flex 
+      gap="1rem" 
+      padding="1rem" 
+      borderRadius="lg"
+      borderColor="white"
+    >
       <Select
-        variant="unstyled"
-        size="md"
+        _hover={{ borderColor: 'rgb(15,215,245)', cursor: 'pointer' }}
+        variant="outline"
+        size="lg"
+        color="#FFFFFF"
+        focusBorderColor="#FFFFFF"
         defaultValue={currency}
         onChange={(e) => onCurrencyChange(e.target.value)}
       >
         {currencyList.map((currency) => {
           return (
-            <option key={currency} value={currency}>
+            <option 
+              key={currency} 
+              value={currency}
+            >
               {currency} - {(symbol)[currency]}
             </option>
           );

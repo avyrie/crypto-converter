@@ -22,17 +22,32 @@ const ConverterDisplay: React.FC<ConverterDisplayProps> = ({
 }) => {
     
     return (
-        <>
-            <Box textAlign="right">
-                <Text fontSize="2xl" fontWeight="bold" color="purple.500">
-                    {amount} {currencyOne}
-                </Text>
-                <Text fontSize="2xl" fontWeight="bold" color="purple.500">
-                    {convertedAmount} {currencyTwo}
-                </Text>
-                <Text fontSize='xs' color='gray.400'>Market rates collected - {date} {time}</Text>
-            </Box>
-        </>
+        <Box 
+            textAlign="right" 
+            paddingRight="1rem" 
+            paddingTop="1rem"
+        >
+            <Text 
+                fontSize="2xl" 
+                fontWeight="bold" 
+                color="rgb(15,215,245)"
+            >
+                {amount} {currencyOne}
+            </Text>
+            <Text 
+                fontSize="2xl" 
+                fontWeight="bold" 
+                color="rgb(15,215,245)"
+            >
+                {convertedAmount} {currencyTwo}
+            </Text>
+            <Text 
+                fontSize='xs' 
+                color='gray.400'
+            >
+                Market rates collected - {date} {time}
+            </Text>
+        </Box>
     )
 }
 

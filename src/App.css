@@ -1,0 +1,10 @@
+/* body {
+    background-image: url("./assets/currency.jpg") !important;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+} */
+option:hover {
+    color: 'rgb(15,215,245)';
+    cursor: pointer;
+}

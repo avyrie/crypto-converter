@@ -1,29 +1,28 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, Spinner, Text } from "@chakra-ui/react";
-import { UseQueryResult } from "@tanstack/react-query";
-import { useCurrency } from "../common/hooks/useCurrency";
+import { useCurrency } from "../Hooks/useCurrency";
 import ConverterHeader from './components/ConverterHeader/'
 import ConverterOption from './components/ConverterOption/'
 import ConverterInput from './components/ConverterInput'
 import ConverterDisplay from './components/ConverterDisplay'
 
-interface ConverterProps {
-    isLoading: boolean,
-    isError: boolean,
-    amount: number, 
-    setAmout: (value: number) => void;
-    currencyOne: string, 
-    setCurrencyOne: (value: string) => void,
-    setCurrencyTwo: (value: string) => void,
-    currencyTwo: string, 
-    currencyList: string[],
-    convertedAmount: number,
-    ratesData: object,
-    symbolsData: object, 
-    date: string, 
-    time: string
-}
-const Converter: React.FC<ConverterProps> = () => {
+// interface ConverterProps {
+//     isLoading: boolean,
+//     isError: boolean,
+//     amount: number, 
+//     setAmout: (value: number) => void;
+//     currencyOne: string, 
+//     setCurrencyOne: (value: string) => void,
+//     setCurrencyTwo: (value: string) => void,
+//     currencyTwo: string, 
+//     currencyList: string[],
+//     convertedAmount: number,
+//     ratesData: object,
+//     symbolsData: object, 
+//     date: string, 
+//     time: string
+// }
+const Converter = () => {
     const { 
         isLoading,
         isError,
@@ -61,7 +60,7 @@ const Converter: React.FC<ConverterProps> = () => {
         );
     
     return ( 
-        <Box width={{ base: "90vw", sm: "45vw" }} margin="0 auto">
+        <Box width="70%" height="80%" margin="0 auto" padding="5%" background="rgb(4,39,77, 0.7)">
             <ConverterHeader />
             <ConverterOption 
                 currencyList={currencyList}
@@ -75,8 +74,15 @@ const Converter: React.FC<ConverterProps> = () => {
                 onCurrencyChange={setCurrencyTwo}
                 currency={currencyTwo}
             />
-            <ConverterInput value={amount} onAmountChange={setAmount}/>
-            <ConverterDisplay amount={amount} ratesData={ratesData.data} currencyOne={currencyOne} currencyTwo={currencyTwo} convertedAmount={convertedAmount} date={date} time={time}/>
+            <ConverterInput 
+                value={amount} 
+                onAmountChange={setAmount}
+            />
+            <ConverterDisplay 
+                amount={amount} 
+                ratesData={ratesData.data} currencyOne={currencyOne} currencyTwo={currencyTwo} convertedAmount={convertedAmount} date={date} 
+                time={time}
+            />
         </Box>
     );
 }

@@ -1,4 +1,4 @@
-import { FormLabel, Input } from "@chakra-ui/react";
+import { Flex, FormLabel, Input } from "@chakra-ui/react";
 import React from "react";
 
 interface ConverterInputProps {
@@ -8,20 +8,30 @@ interface ConverterInputProps {
 const ConverterInput: React.FC<ConverterInputProps> = ({ value, onAmountChange }) => {
 
     return ( 
-        <>
-            <FormLabel htmlFor="amount" color="purple.300">
+        <Flex 
+            paddingLeft="1rem" 
+            paddingRight="1rem" 
+            direction="column"
+        >
+            <FormLabel 
+                htmlFor="amount" 
+                color="gray.300"
+                padding="1 rem"
+                marginTop="5"
+            >
                 Amount
             </FormLabel>
             <Input 
+                color="gray.300"
                 id="amount" 
                 size="lg" 
                 type="number" 
+                padding="1 rem"
                 value={value} 
                 min={0} 
                 onChange={(e) => onAmountChange(parseInt(e.target.value, 10))}
             />
-        </>
-
+        </Flex>
      );
 }
  

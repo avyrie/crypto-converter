@@ -1,4 +1,5 @@
-import { Flex, Select } from "@chakra-ui/react";
+import { Avatar, Flex, Select } from "@chakra-ui/react";
+import { useFlags } from '../../../Hooks/useFlags'
 
 interface SymbolObject {
     [currencyCode: string]: string;
@@ -16,6 +17,7 @@ const ConverterOption: React.FC<ConverterOptionProps> = ({
   currencyList,
   symbol,
 }) => {
+  const { flagUrl } = useFlags(currency)
   return (
     <Flex 
       gap="1rem" 
@@ -23,12 +25,14 @@ const ConverterOption: React.FC<ConverterOptionProps> = ({
       borderRadius="lg"
       borderColor="white"
     >
+      <Avatar 
+          src={flagUrl} size="xs"
+      />
       <Select
-        _hover={{ borderColor: 'rgb(15,215,245)', cursor: 'pointer' }}
-        variant="outline"
+        _hover={{ cursor: 'pointer' }}
+        variant="unstyled"
         size="lg"
         color="#FFFFFF"
-        focusBorderColor="#FFFFFF"
         defaultValue={currency}
         onChange={(e) => onCurrencyChange(e.target.value)}
       >

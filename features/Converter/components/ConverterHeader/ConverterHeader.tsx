@@ -4,7 +4,6 @@ const ConverterHeader = () => {
         <Box 
             textAlign='center' 
             color='white'
-            marginBottom='10'
         >
             <Text 
                 fontWeight="bold" 

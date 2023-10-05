@@ -28,3 +28,6 @@ If you are developing a production application, we recommend updating the config
 
 CSS Library: Chakra UI
 API Call/Server State Handling: React Query
+
+<a href="https://www.flaticon.com/free-icons/inflation" title="inflation icons">Inflation icons created by Sulhandika - Flaticon</a>
+<a href="https://www.freepik.com/free-vector/digital-money-transfer-technology-background_4025865.htm#query=currency&position=28&from_view=search&track=sph">Image by starline</a> on Freepik

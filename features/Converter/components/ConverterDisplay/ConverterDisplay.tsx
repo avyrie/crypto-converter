@@ -20,7 +20,7 @@ const ConverterDisplay: React.FC<ConverterDisplayProps> = ({
     date,
     time
 }) => {
-    
+
     return (
         <Box 
             textAlign="right" 

@@ -5,8 +5,10 @@ interface ConverterInputProps {
     value: number;
     onAmountChange: (value: number) => void;
 }
-const ConverterInput: React.FC<ConverterInputProps> = ({ value, onAmountChange }) => {
 
+const ConverterInput: React.FC<ConverterInputProps> = ({ value, onAmountChange }) => {
+    console.log(value)
+    
     return ( 
         <Flex 
             paddingLeft="1rem" 
@@ -16,8 +18,6 @@ const ConverterInput: React.FC<ConverterInputProps> = ({ value, onAmountChange }
             <FormLabel 
                 htmlFor="amount" 
                 color="gray.300"
-                padding="1 rem"
-                marginTop="5"
             >
                 Amount
             </FormLabel>
@@ -26,7 +26,6 @@ const ConverterInput: React.FC<ConverterInputProps> = ({ value, onAmountChange }
                 id="amount" 
                 size="lg" 
                 type="number" 
-                padding="1 rem"
                 value={value} 
                 min={0} 
                 onChange={(e) => onAmountChange(parseInt(e.target.value, 10))}

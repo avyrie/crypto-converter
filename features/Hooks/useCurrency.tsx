@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useQueries, UseQueryResult } from "@tanstack/react-query";
+import { useQueries } from "@tanstack/react-query";
 import { useState } from "react";
 import { fetchRates, fetchSymbols } from "../Converter/api/fetchData";
 
@@ -86,8 +86,7 @@ export const useCurrency = (): {
   );
 
   const currencyList = symbolsData.data ? Object.keys(symbolsData.data) : [];
-  // console.log(`THIS ${JSON.stringify(ratesData)}`);
-
+ 
   return {
     isLoading,
     isError,

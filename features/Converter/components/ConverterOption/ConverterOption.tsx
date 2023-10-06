@@ -1,8 +1,8 @@
 import { Avatar, Flex, Select } from "@chakra-ui/react";
-import { useFlags } from '../../../Hooks/useFlags'
+import { useFlags } from "../../../hooks/useFlags";
 
 interface SymbolObject {
-    [currencyCode: string]: string;
+  [currencyCode: string]: string;
 }
 type ConverterOptionProps = {
   currency: string;
@@ -17,19 +17,18 @@ const ConverterOption: React.FC<ConverterOptionProps> = ({
   currencyList,
   symbol,
 }) => {
-  const { flagUrl } = useFlags(currency)
+  const { flagUrl } = useFlags(currency);
   return (
-    <Flex 
-      gap="1rem" 
-      padding="1rem" 
+    <Flex
+      gap="1rem"
+      padding="1rem"
+      borderWidth="thin"
       borderRadius="lg"
       borderColor="white"
     >
-      <Avatar 
-          src={flagUrl} size="xs"
-      />
+      <Avatar src={flagUrl} size="xs" />
       <Select
-        _hover={{ cursor: 'pointer' }}
+        _hover={{ cursor: "pointer" }}
         variant="unstyled"
         size="lg"
         color="#FFFFFF"
@@ -38,11 +37,8 @@ const ConverterOption: React.FC<ConverterOptionProps> = ({
       >
         {currencyList.map((currency) => {
           return (
-            <option 
-              key={currency} 
-              value={currency}
-            >
-              {currency} - {(symbol)[currency]}
+            <option key={currency} value={currency}>
+              {currency} - {symbol[currency]}
             </option>
           );
         })}

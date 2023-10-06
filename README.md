@@ -1,10 +1,13 @@
 # Currency Converter
-### A React + TypeScript + Vite project
+#### A React + TypeScript + Vite project
+
+### Site deployed at
+https://enchanting-cheesecake-5aadd4.netlify.app/
 
 
 ## Getting Started
 
-## Scripts
+### Scripts
 - `yarn` to install dependencies
 - `yarn dev` to run app in development mode (note: I have this script set to `"vite --host"` which will also allow you to run this app in development mode on a separate mobile device assuming that device is connected to the same wi-fi as your computer)
 - `yarn build` to build app for production
@@ -12,7 +15,7 @@
 This project was initiated using `yarn create vite .`
 (Select TypeScript)
 
-## Technology
+### Technology
 
 | Tool Name   | Function                       |
 | ----------- | ------------------------------ |
@@ -23,22 +26,23 @@ This project was initiated using `yarn create vite .`
 | Chakra UI   | CSS Library                    |
 | React Query | API call/server state handling |
 | Axios       | API data fetching              |
+| Netlify     | Used to deploy active site     |
 
-## Dependencies
+### Dependencies
 - `yarn add axios`
 - `yarn add --dev --exact prettier`
 - `yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion`
 - `yarn add @chakra-ui/icons`
 - `yarn add @tanstack/react-query`
 
-## Approach
+### Approach
 This project was created with reference to an instructional video created by Calvin Torra. Of course many aspects between said video and the final project were changed including the aesthetic, some functionalities, and the coding language used. The original video had the entire project coded in JavaScript. I translated the entire project to TypeScript and made my own changes.
 
 Custom react hooks including `useCurrency()` and `useFlags()` were created for this project.
 
 Chakra UI responsive styling was implemented to create a responsive project that resizes appropriately with respect to screen size.
 
-## Next Steps
+### Next Steps
 My original intent with this project was to create a cryptocurrency converter. I have small amounts of investments in a few different cryptocurrencies and, with the ever-fluctuating market, I wanted a way to accurately visualize my monetary investment worth. I have already begun implementing functionality for a cryptocurrency section of this project and plan on displaying it versus the global currency conversion using separate tabs, but similar functionalities. I have identified multiple API's that would be good to use to pull cryptocurrency data including CoinAPI.io and CoinGecko.
 
 In addition to adding cryptocurrency conversion functionality, I would also like to add global SCSS variables. While there are not many places where repeating CSS attributes are used, there are a few including colour that repeat and I would like to cut down on code redundency.

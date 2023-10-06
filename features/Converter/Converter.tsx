@@ -1,5 +1,5 @@
 import { Box, Grid, GridItem, Spinner, Text } from "@chakra-ui/react";
-import { useCurrency } from "../hooks/useCurrency.tsx";
+import { useCurrency } from "../common/hooks/useCurrency.tsx";
 import ConverterHeader from "./components/ConverterHeader/";
 import ConverterOption from "./components/ConverterOption/";
 import ConverterInput from "./components/ConverterInput";

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useQueries } from "@tanstack/react-query";
 import { useState } from "react";
-import { fetchRates, fetchSymbols } from "../Converter/api/fetchData";
-import { UseCurrency } from '../../types'
+import { fetchRates, fetchSymbols } from "../../Converter/api/fetchData";
+import { UseCurrency } from '../../../types'
 
 // these interfaces describe the type of data we expect to receive from the API calls
 interface RatesData {

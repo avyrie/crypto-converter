@@ -1,4 +1,6 @@
-export const useFlags = (flag: string) => {
+import { UseFlags } from '../../types'
+
+export const useFlags = (flag: string): UseFlags => {
   const flagUrl = `https://wise.com/public-resources/assets/flags/rectangle/${flag.toLowerCase()}.png`;
   return { flagUrl };
 };

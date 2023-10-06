@@ -2,6 +2,7 @@
 import { useQueries } from "@tanstack/react-query";
 import { useState } from "react";
 import { fetchRates, fetchSymbols } from "../Converter/api/fetchData";
+import { UseCurrency } from '../../types'
 
 // these interfaces describe the type of data we expect to receive from the API calls
 interface RatesData {
@@ -18,25 +19,7 @@ interface SymbolsData {
   };
 }
 
-export const useCurrency = (): {
-  amount: number;
-  currencyOne: string;
-  setCurrencyOne: (value: string) => void;
-  currencyTwo: string;
-  setCurrencyTwo: (value: string) => void;
-  currencyList: string[];
-  isLoading: boolean;
-  isError: boolean;
-  setAmount: (value: number) => void;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  convertedAmount: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ratesData: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  symbolsData: any;
-  date: string;
-  time: string;
-} => {
+export const useCurrency = (): UseCurrency => {
   const [amount, setAmount] = useState<number>(25);
   const [currencyOne, setCurrencyOne] = useState<string>("USD");
   const [currencyTwo, setCurrencyTwo] = useState<string>("EUR");

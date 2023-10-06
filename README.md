@@ -1,12 +1,13 @@
 # Currency Converter
 ### A React + TypeScript + Vite project
 
+
 ## Getting Started
 
-### Scripts
-`yarn` to install dependencies
-`yarn dev` to run app in development mode (note: I have this script set to `"vite --host"` which will also allow you to run this app in development mode on a separate mobile device assuming that device is connected to the same wi-fi as your computer)
-`yarn build` to build app for production
+## Scripts
+- `yarn` to install dependencies
+- `yarn dev` to run app in development mode (note: I have this script set to `"vite --host"` which will also allow you to run this app in development mode on a separate mobile device assuming that device is connected to the same wi-fi as your computer)
+- `yarn build` to build app for production
 
 This project was initiated using `yarn create vite .`
 (Select TypeScript)
@@ -24,11 +25,11 @@ This project was initiated using `yarn create vite .`
 | Axios       | API data fetching              |
 
 ## Dependencies
-`yarn add axios`
-`yarn add --dev --exact prettier`
-`yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion`
-`yarn add @chakra-ui/icons`
-`yarn add @tanstack/react-query`
+- `yarn add axios`
+- `yarn add --dev --exact prettier`
+- `yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion`
+- `yarn add @chakra-ui/icons`
+- `yarn add @tanstack/react-query`
 
 ## Approach
 This project was created with reference to an instructional video created by Calvin Torra. Of course many aspects between said video and the final project were changed including the aesthetic, some functionalities, and the coding language used. The original video had the entire project coded in JavaScript. I translated the entire project to TypeScript and made my own changes.
@@ -58,7 +59,7 @@ It is always difficult while referring to an instructional element to differenti
 
 
 ### Attributions
-<a href="https://www.flaticon.com/free-icons/inflation" title="inflation icons">Inflation icons created by Sulhandika - Flaticon</a>
-<a href="https://www.freepik.com/free-vector/digital-money-transfer-technology-background_4025865.htm#query=currency&position=28&from_view=search&track=sph">Image by starline</a> on Freepik
-<a href="https://www.youtube.com/@calvintorra">Calvin Torra YouTube Channel</a>
+- <a href="https://www.flaticon.com/free-icons/inflation" title="inflation icons">Inflation icons created by Sulhandika - Flaticon</a>
+- <a href="https://www.freepik.com/free-vector/digital-money-transfer-technology-background_4025865.htm#query=currency&position=28&from_view=search&track=sph">Image by starline</a> on Freepik
+- <a href="https://www.youtube.com/@calvintorra">Calvin Torra YouTube Channel</a>
 

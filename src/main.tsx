@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       {/* So we can use the css components */}
       <ChakraProvider>
         <App />
-        <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"} />
+        {/* <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"} /> */}
       </ChakraProvider>
     </QueryClientProvider>
   </React.StrictMode>,

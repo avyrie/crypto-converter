@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, Text } from "@chakra-ui/react";
 
 interface ConverterDisplayProps {
@@ -13,14 +12,21 @@ interface ConverterDisplayProps {
 
 const ConverterDisplay: React.FC<ConverterDisplayProps> = ({
     amount,
-    ratesData,
     currencyOne,
     currencyTwo,
     convertedAmount,
     date,
     time
 }) => {
-
+    let enteredAmount:string|number;
+    let displayedConvertedAmount:string|number;
+    if (amount.toString().length > 8 || convertedAmount.toString().length > 8) {
+            enteredAmount = parseFloat(amount.toString()).toExponential(4).toString();
+            displayedConvertedAmount = parseFloat(convertedAmount.toString()).toExponential(4).toString();
+    } else {
+        enteredAmount = amount;
+        displayedConvertedAmount = convertedAmount
+    }
     return (
         <Box 
             textAlign="right" 
@@ -32,14 +38,14 @@ const ConverterDisplay: React.FC<ConverterDisplayProps> = ({
                 fontWeight="bold" 
                 color="rgb(15,215,245)"
             >
-                {amount} {currencyOne}
+                {enteredAmount} {currencyOne}
             </Text>
             <Text 
                 fontSize="2xl" 
                 fontWeight="bold" 
                 color="rgb(15,215,245)"
             >
-                {convertedAmount} {currencyTwo}
+                {displayedConvertedAmount} {currencyTwo}
             </Text>
             <Text 
                 fontSize='xs' 

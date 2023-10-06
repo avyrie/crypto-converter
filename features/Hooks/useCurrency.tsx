@@ -56,7 +56,7 @@ export const useCurrency = (): {
         select: ({ rates, date, timestamp }: RatesData) => {
           return { rates, date, timestamp };
         },
-        keepPreviousData: true
+        keepPreviousData: true,
       },
       {
         queryKey: ["symbols"],
@@ -86,7 +86,7 @@ export const useCurrency = (): {
   );
 
   const currencyList = symbolsData.data ? Object.keys(symbolsData.data) : [];
- 
+
   return {
     isLoading,
     isError,

@@ -1,27 +1,11 @@
 import { Box, Grid, GridItem, Spinner, Text } from "@chakra-ui/react";
-import { useCurrency } from "../hooks/useCurrency";
+import { useCurrency } from "../hooks/useCurrency.tsx";
 import ConverterHeader from "./components/ConverterHeader/";
 import ConverterOption from "./components/ConverterOption/";
 import ConverterInput from "./components/ConverterInput";
 import ConverterDisplay from "./components/ConverterDisplay";
 import { RepeatIcon } from "@chakra-ui/icons";
 
-// interface ConverterProps {
-//     isLoading: boolean,
-//     isError: boolean,
-//     amount: number,
-//     setAmout: (value: number) => void;
-//     currencyOne: string,
-//     setCurrencyOne: (value: string) => void,
-//     setCurrencyTwo: (value: string) => void,
-//     currencyTwo: string,
-//     currencyList: string[],
-//     convertedAmount: number,
-//     ratesData: object,
-//     symbolsData: object,
-//     date: string,
-//     time: string
-// }
 const Converter = () => {
   const {
     isLoading,

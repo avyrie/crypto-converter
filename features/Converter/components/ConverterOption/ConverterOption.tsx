@@ -1,5 +1,5 @@
 import { Avatar, Flex, Select } from "@chakra-ui/react";
-import { useFlags } from "../../../hooks/useFlags";
+import { useFlags } from "../../../hooks/useFlags.tsx";
 
 interface SymbolObject {
   [currencyCode: string]: string;
